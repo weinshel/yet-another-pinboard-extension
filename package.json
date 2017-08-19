@@ -21,7 +21,8 @@
     "copyandbuild": "npm run copytodist && npm run lint && npm run tsc",
     "build": "npm run lint && npm run tsc",
     "start": "web-ext run -s dist/",
-    "copyandbuildandrun": "npm run copytodist && npm run lint && npm run tsc && npm start"
+    "copyandbuildandrun": "npm run copytodist && npm run lint && npm run tsc && npm start",
+    "sign": "npm run copyandbuild && web-ext sign -s dist/"
   },
   "repository": {
     "type": "git",
