@@ -4,7 +4,7 @@
   "description" : "Browser extension for pinboard (including omnibar search and actionbar button popup)",
   "homepage_url": "https://github.com/weinshel/yet-another-pinboard-extension",
   "author": "Ben Weinshel",
-  "version": "1.3.0",
+  "version": "1.2.7",
   "applications": {
     "gecko": {
       "id": "yet-another-pinboard-extension@weinshel.net"

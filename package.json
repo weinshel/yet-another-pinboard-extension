@@ -14,14 +14,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copytodist": "mkdir .\\dist\\vendor\\webextension-polyfill & mkdir .\\dist\\js & mkdir .\\dist\\html && mkdir .\\dist\\css & mkdir .\\dist\\img & copy /y .\\node_modules\\webextension-polyfill\\dist\\*.min.js* .\\dist\\vendor\\webextension-polyfill & copy /y .\\src\\img\\*.* .\\dist\\img & copy /y .\\src\\html\\*.* .\\dist\\html & copy /y .\\src\\css\\*.* .\\dist\\css & copy /y .\\src\\manifest.json .\\dist\\manifest.json" ,
+    "copytodist": "rm -rf dist && mkdir -p dist/vendor/webextension-polyfill && mkdir -p dist/js && mkdir -p dist/html && mkdir -p dist/css && mkdir -p dist/img && cp node_modules/webextension-polyfill/dist/*.min.js* dist/vendor/webextension-polyfill && cp src/img/*.* dist/img && cp src/html/*.* dist/html && cp src/css/*.* dist/css && cp src/manifest.json dist/manifest.json",
     "lint": "tslint --fix --project tsconfig.json",
     "tsc": "tsc",
     "copyandbuild": "npm run copytodist && npm run lint && npm run tsc",
     "build": "npm run lint && npm run tsc",
     "start": "web-ext run -s dist/",
-    "copyandbuildandrun": "npm run copytodist && npm run lint && npm run tsc && npm start",
-    "sign": "npm run copyandbuild && web-ext sign -s dist/"
+    "copyandbuildandrun": "npm run copytodist && npm run lint && npm run tsc && npm start"
   },
   "repository": {
     "type": "git",
