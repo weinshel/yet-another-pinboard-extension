@@ -12,7 +12,7 @@
   },
   "background": {
     "scripts": [
-      "webextension-polyfill/browser-polyfill.min.js",
+      "vendor/webextension-polyfill/browser-polyfill.min.js",
       "js/pins.js",
       "js/pin.js",
       "js/options.js",
